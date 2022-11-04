@@ -21,11 +21,53 @@ const BODY = (
   }}/>
 )
 
+const RIGHT_ARM = (
+  <div style={{
+    width:'100px',
+    height:'10px',
+    borderRadius:'100%',
+    position:'absolute',
+    top:'150px',
+    right:'-100px',
+    rotate:'-30deg',
+    transformOrigin:'left bottom'
+  }}/>
+)
+
+const LEFT_ARM = (
+  <div style={{
+    width:'100px',
+    height:'10px',
+    borderRadius:'100%',
+    position:'absolute',
+    top:'150px',
+    right:'10px',
+    rotate:'-30deg',
+    transformOrigin:'right bottom'
+  }}/>
+)
+
+const RIGHT_LEG = (
+  <div style={{
+    width:'100px',
+    height:'10px',
+    borderRadius:'100%',
+    position:'absolute',
+    top:'210px',
+    right:'-90px',
+    rotate:'60deg',
+    transformOrigin:'left bottom'
+  }}/>
+)
+
 const HangmanDrawing = () => {
   return (
     <div style={{ position:'relative'}}>
       {HEAD}
       {BODY}
+      {RIGHT_ARM}
+      {LEFT_ARM}
+      {RIGHT_LEG}
       <div 
       style={{
         height:'50px',
