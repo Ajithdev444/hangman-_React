@@ -60,6 +60,20 @@ const RIGHT_LEG = (
   }}/>
 )
 
+const LEFT_LEG = (
+  <div style={{
+    width:'100px',
+    height:'10px',
+    borderRadius:'100%',
+    position:'absolute',
+    top:'210px',
+    right:0,
+    rotate:'-60deg',
+    transformOrigin:'right bottom'
+  }}/>
+)
+
+
 const HangmanDrawing = () => {
   return (
     <div style={{ position:'relative'}}>
@@ -68,6 +82,7 @@ const HangmanDrawing = () => {
       {RIGHT_ARM}
       {LEFT_ARM}
       {RIGHT_LEG}
+      {LEFT_LEG}
       <div 
       style={{
         height:'50px',
