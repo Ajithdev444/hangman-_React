@@ -1,19 +1,19 @@
 const HEAD = (
   <div style={{
-    width:'50px',
-    height:'50px',
+    width:'30px',
+    height:'30px',
     borderRadius:'100%',
-    border:'10px solid black',
+    border:'5px solid black',
     position:'absolute',
-    top:'50px',
-    right:'-30px',
+    top:'40px',
+    right:'-18px',
   }}/>
 )
 
 const BODY = (
   <div style={{
     width:'10px',
-    height:'100px',
+    height:'80px',
     borderRadius:'100%',
     position:'absolute',
     top:'120px',
@@ -42,7 +42,7 @@ const LEFT_ARM = (
     position:'absolute',
     top:'150px',
     right:'10px',
-    rotate:'-30deg',
+    rotate:'30deg',
     transformOrigin:'right bottom'
   }}/>
 )
@@ -73,20 +73,20 @@ const LEFT_LEG = (
   }}/>
 )
 
-const BODY_PARTS =[HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG]
+const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG]
 
-type HangmanDrawingProps ={
+type HangmanDrawingProps = {
   numberOfGuesses: number
 }
 
 const HangmanDrawing = ({numberOfGuesses}: HangmanDrawingProps) => {
   return (
     <div style={{ position:'relative'}}>
-      {BODY_PARTS.slice(0, numberOfGuesses)}
+      {BODY_PARTS.slice(0,numberOfGuesses)}
       <div 
       style={{
-        height:'50px',
-        width:'10px',
+        height:'40px',
+        width:'5px',
         background:'black',
         top: 0,
         right: 0,
@@ -95,21 +95,21 @@ const HangmanDrawing = ({numberOfGuesses}: HangmanDrawingProps) => {
       />
       <div 
       style={{
-        height:'10px',
-        width:'200px',
+        height:'5px',
+        width:'100px',
         background:'black',
-        marginLeft:'120px',
+        marginLeft:'90px',
       }}
       />
       <div 
       style={{
-        height:'400px',
-        width:'10px',
+        height:'200px',
+        width:'5px',
         background:'black',
-        marginLeft:'120px',
+        marginLeft:'90px',
       }}
       />
-      <div style={{ height:'10px', width:'250px', background:'black'}}/>
+      <div style={{ height:'5px', width:'180px', background:'black'}}/>
 
     </div>
   )

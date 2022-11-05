@@ -23,7 +23,7 @@ const addGuessedLetter = useCallback(( letter: string) =>{
   if(guessedLetters.includes(letter) || isLoser || isWinner) return
 
   setGuessedLetters(currentLetters => [...currentLetters, letter])
-},[guessedLetters, isLoser, isWinner])
+},[ guessedLetters, isWinner, isLoser])
 
 
 
@@ -62,15 +62,15 @@ useEffect(()=>{
   return (
     <div 
       style={{
-        maxWidth:'800px',
+        maxWidth:'1000px',
         display:'flex',
         flexDirection:'column',
-        gap:'2rem',
+        gap:'1rem',
         margin:'0 auto',
         alignItems:'center'
       }}
     >
-      <div style={{ fontSize:'2rem', textAlign:'center'}}>
+      <div style={{ fontSize:'1.5rem', textAlign:'center'}}>
         {isWinner && 'Winner! - Refresh to try again'}
         {isLoser && 'Nice Try - Refresh to try again'}
         </div>

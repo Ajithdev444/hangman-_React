@@ -9,7 +9,7 @@ const HangmanWord = ({ guessedLetters, wordToGuess, reveal=false}: HangmanWordPr
     <div style={{
        display:'flex',
        gap:'.25rem',
-       fontSize:'6rem',
+       fontSize:'2rem',
        fontWeight:'bold', 
        textTransform:'uppercase',
        fontFamily:'monospace'}} >
